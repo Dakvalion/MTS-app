@@ -8,9 +8,9 @@ export function Navbar() {
 
     const getLinkForRole = () => {
         if (user && user.role === 'admin') {
-            return { text: 'Заявления', path: '/statements' };
-        } else {
             return { text: 'Мои заявки', path: '/table' };
+        } else {
+            return { text: 'Заявления', path: '/statements' };
         }
     };
 

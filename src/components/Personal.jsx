@@ -8,6 +8,8 @@ export function Personal() {
     //const { user } = useUser();
     const [copied, setCopied] = useState(false);
 
+    
+
     const handleCopy = () => {
         setCopied(true);
         setTimeout(() => setCopied(false), 500);
@@ -37,7 +39,7 @@ export function Personal() {
                         </CopyToClipboard>
                     </div>
                 </div>
-                {copied && <div className="copy">Скопировано</div>}
+                {copied && <div className="copy">Copy!</div>}
             </div>
         </div>
     )

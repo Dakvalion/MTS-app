@@ -1,4 +1,3 @@
-@charset "UTF-8";
 :root {
   --main-bg-color: #1F1F20;
   --light-bg-color: #303031;
@@ -144,7 +143,7 @@ button {
   cursor: pointer;
 }
 .personal__main__info__passport button :before {
-  content: "Скопировано";
+  content: "Copy!";
   position: absolute;
   top: -50px;
   right: 0px;
@@ -271,6 +270,26 @@ button {
   top: 440px;
 }
 
+::-webkit-input-placeholder {
+  color: var(--text-grey-color);
+}
+
+::-moz-placeholder {
+  color: var(--text-grey-color);
+}
+
+:-ms-input-placeholder {
+  color: var(--text-grey-color);
+}
+
+::-ms-input-placeholder {
+  color: var(--text-grey-color);
+}
+
+::placeholder {
+  color: var(--text-grey-color);
+}
+
 .modal {
   width: 100vw;
   height: 100vh;
@@ -305,7 +324,7 @@ button {
   -webkit-transition: 0.4s all;
   transition: 0.4s all;
 }
-.modal__content button {
+.modal__content__button {
   background-color: var(--light-bg-color);
   position: absolute;
   margin-top: 10px;
@@ -344,7 +363,7 @@ button {
   margin-top: 15px;
   margin-bottom: 20px;
 }
-.application__form input, .application__form select, .application__form textarea {
+.application__form input, .application__form select, .application__form__goals {
   border-radius: 16px;
   border: none;
   width: 355px;
@@ -353,19 +372,19 @@ button {
   resize: none;
   text-indent: 20px;
   font-size: 20px;
-  color: var(--text-grey-color);
+  color: white;
 }
-.application__form textarea {
+.application__form__goals {
   width: 350px;
   height: 137px;
-  padding: 10px 4px;
+  padding: 10px 10px;
 }
 .application__form select {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
 }
-.application__form button {
+.application__form__button {
   border-radius: 16px;
   width: 725px;
   height: 69px;
@@ -390,13 +409,118 @@ button {
   height: 69px;
   background: transparent;
 }
+.application__form__comment {
+  width: 715px;
+  height: 69px;
+  margin-left: 15px;
+  font-size: 20px;
+  background-color: var(--lighter-grey);
+  border: none;
+  border-radius: 16px;
+  padding: 10px 4px;
+  resize: none;
+  text-indent: 20px;
+  color: white;
+}
+.application__form__yes {
+  width: 355px;
+  height: 69px;
+  background-color: var(--mts-color);
+  border-radius: 16px;
+  left: 0px;
+}
+.application__form__no {
+  width: 355px;
+  height: 69px;
+  background-color: var(--lighter-grey);
+  border-radius: 16px;
+}
 
 input[type=date]::-webkit-calendar-picker-indicator {
   opacity: 1;
   display: block;
   width: 24px;
   height: 24px;
-  right: 730px;
+  right: 720px;
   background: url("../public/date.png") no-repeat;
   position: absolute;
+}
+
+.statement__container {
+  width: 750px;
+  height: 610px;
+  margin: 0 auto;
+}
+.statement__container h3 {
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+.statement__form input, .statement__form select, .statement__form__goals {
+  border-radius: 16px;
+  border: none;
+  width: 355px;
+  height: 69px;
+  background-color: var(--lighter-grey);
+  resize: none;
+  text-indent: 20px;
+  font-size: 20px;
+  color: white;
+}
+.statement__form__goals {
+  width: 350px;
+  height: 137px;
+  padding: 10px 4px;
+}
+.statement__form select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+.statement__form__table {
+  border-spacing: 10px;
+}
+.statement__form__select {
+  border-radius: 16px;
+  border: none;
+  width: 355px;
+  height: 69px;
+  background: url("../public/plus.png") no-repeat 94% center var(--lighter-grey);
+}
+.statement__form__select select {
+  border-radius: 16px;
+  border: none;
+  width: 355px;
+  height: 69px;
+  background: transparent;
+}
+.statement__form__comment {
+  width: 707px;
+  height: 69px;
+  margin-left: 13px;
+  margin-top: 10px;
+  font-size: 20px;
+  background-color: var(--lighter-grey);
+  border: none;
+  border-radius: 16px;
+  padding: 10px 10px;
+  resize: none;
+  text-indent: 20px;
+  color: white;
+}
+.statement__form button {
+  width: 355px;
+  height: 69px;
+  border-radius: 16px;
+  display: inline-block;
+  margin-left: 13px;
+  margin-top: 10px;
+  border: none;
+}
+.statement__form__yes {
+  background-color: var(--mts-color);
+}
+.statement__form__no {
+  background-color: var(--lighter-grey);
+  border-radius: 16px;
 }

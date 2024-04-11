@@ -22,7 +22,7 @@
         transform: scale(0.5);
         transition: 0.4s all;
 
-        button {
+        &__button {
             background-color: var(--light-bg-color);
             position: absolute;
             margin-top: 10px;

@@ -20,7 +20,7 @@ export function ChangeAppForm () {
                     </tr>
                     <tr>
                         <td><input type='date' name='whenGo' placeholder="Дата начала"></input></td>
-                        <td rowspan="2"><textarea name='goals' placeholder="Цель поездки"></textarea></td>
+                        <td rowspan="2"><textarea name='goals'  className="application__form__goals" placeholder="Цель поездки"></textarea></td>
                     </tr>
                     <tr>
                     <td><input type='date' name='whenArrive' placeholder="Дата окончания"></input></td>

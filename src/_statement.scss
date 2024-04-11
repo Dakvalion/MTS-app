@@ -1,8 +1,8 @@
-.application {
+.statement {
 
     &__container {
         width: 750px;
-        height: 500px;
+        height: 610px;
         margin: 0 auto;
 
         h3 {
@@ -25,27 +25,19 @@
             font-size: 20px;
             color: white;
             
+
+           
         }
 
         &__goals {
             width: 350px;
             height: 137px;
-            padding: 10px 10px;
+            padding: 10px 4px;
 
         }
 
        select {
         appearance: none;
-       }
-
-
-       &__button {
-            border-radius: 16px;
-            width: 725px;
-            height: 69px;
-            background-color: var(--mts-color);
-            margin-left: 15px;
-            border: none;
        }
 
        &__table {
@@ -73,47 +65,41 @@
        }
        
        &__comment {
-        width: 715px;
+        width: 707px;
         height: 69px;
-        margin-left: 15px;
+        margin-left: 13px;
+        margin-top: 10px;
         font-size: 20px;
         background-color: var(--lighter-grey);
         border: none;
         border-radius: 16px;
-        padding: 10px 4px;
+        padding: 10px 10px;
         resize: none;
         text-indent: 20px;
         color: white;
        }
 
-
-       &__yes {
+       button {
         width:355px;
         height: 69px;
-        background-color: var(--mts-color);
         border-radius: 16px;
-        left: 0px;
+        display: inline-block;
+        margin-left: 13px;
+        margin-top: 10px;
+        border: none;
+       }
+
+       &__yes {
+        background-color: var(--mts-color);
+        
        }
 
        &__no {
-        width:355px;
-        height: 69px;
         background-color: var(--lighter-grey);
         border-radius: 16px;
        }
     }
         
     
-
-    
 }
 
-input[type="date"]::-webkit-calendar-picker-indicator {
-    opacity: 1;
-    display: block;
-    width: 24px;
-    height: 24px;
-    right:720px;
-    background: url('../public/date.png') no-repeat;
-    position: absolute;
-}

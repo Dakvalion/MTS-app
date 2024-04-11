@@ -2,6 +2,7 @@
 import { Modal } from "./Modal";
 import { Navbar } from "./Navbar";
 import { useState } from "react";
+import { StatementForm } from "./StatementForm";
 //import { createContext, useContext } from "react";
 //import { useApplications } from './UserProvider'; 
 
@@ -13,7 +14,8 @@ export function StatementTable() {
 
     return (
         <div className="personal__container">
-            <Modal active={modalActive} setActive={setModalActive}>  
+            <Modal active={modalActive} setActive={setModalActive}>
+                <StatementForm></StatementForm>  
             </Modal>
             <div className="personal__main_nav">
                 <Navbar/>
@@ -35,7 +37,7 @@ export function StatementTable() {
                         <td>128576</td>
                         <td>23.07.2023</td>
                         <td><p className="table__application__body__status--active">Активно</p></td>
-                        <td><button className="table__application__body__button">Просмотр</button></td>
+                        <td><button className="table__application__body__button" onClick={() => {setModalActive(true)}}>Просмотр</button></td>
                     </tr>
                 </tbody>
                 </table>

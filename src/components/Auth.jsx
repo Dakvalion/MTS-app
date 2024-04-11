@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { useNavigate } from 'react-router-dom';
-import { useUser } from './UserProvider'; 
+//import { useUser } from './UserProvider'; 
 
 export function Auth() {
 
     const [userAuth, setUserAuth] = useState({ email:'', password: ''});
     const [errorMessage, setErrorMessage] = useState('');
-    const { setUser } = useUser();
+    //const { setUser } = useUser();
     const navigate = useNavigate();
 
     const handleEmailChange = (event) => {

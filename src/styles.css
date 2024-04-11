@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
   --main-bg-color: #1F1F20;
   --light-bg-color: #303031;
@@ -140,6 +141,32 @@ button {
 }
 .personal__main__info__passport button {
   background-color: var(--lighter-grey);
+  cursor: pointer;
+}
+.personal__main__info__passport button :before {
+  content: "Скопировано";
+  position: absolute;
+  top: -50px;
+  right: 0px;
+  background-color: var(--lighter-grey);
+  border-radius: 10px;
+  font-size: 15px;
+  display: none;
+}
+.personal__main__info__passport button :after {
+  content: "";
+  position: absolute;
+  top: -20px;
+  right: 25px;
+  width: 10px;
+  height: 10px;
+  background-color: var(--lighter-grey);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  display: none;
+}
+.personal__main__info__passport button button.active {
+  display: block;
 }
 
 .navbar__ul__li {
@@ -163,10 +190,18 @@ button {
   border-radius: 33px;
   width: 1095px;
   height: 640px;
+  margin: 0 auto;
   background-color: var(--light-bg-color);
+  border-collapse: collapse;
+}
+.table__container--inner {
+  width: 842px;
+  margin: 0 auto;
 }
 .table__container h3 {
   text-align: center;
+  margin-top: 27px;
+  margin-bottom: 18px;
 }
 .table__button {
   font-size: 16px;
@@ -174,9 +209,11 @@ button {
   width: 183px;
   height: 40px;
   background-color: var(--lighter-grey);
+  margin-bottom: 14px;
 }
 .table__application {
   width: 842px;
+  margin: 0 auto;
 }
 .table__application__head__first {
   width: 20%;
@@ -189,4 +226,177 @@ button {
 }
 .table__application__head__fourth {
   width: 20%;
+}
+.table__application__body {
+  border-collapse: collapse;
+}
+.table__application__body__status--review {
+  background-color: var(--review-color);
+  border-radius: 10px;
+  width: 254px;
+  padding: 3px 10px;
+}
+.table__application__body__status--done {
+  background-color: var(--done-color);
+  border-radius: 10px;
+  width: 100px;
+  padding: 3px 10px;
+}
+.table__application__body__status--deny {
+  background-color: var(--deny-color);
+  border-radius: 10px;
+  width: 80px;
+  padding: 3px 10px;
+}
+.table__application__body__status--active {
+  background-color: var(--active-color);
+  border-radius: 10px;
+  width: 70px;
+  padding: 3px 10px;
+}
+.table__application__body__button {
+  border-radius: 10px;
+  width: 109px;
+  height: 31px;
+  font-size: 16px;
+  background-color: var(--lighter-grey);
+}
+
+.copy {
+  font-size: 15px;
+  text-align: center;
+  width: 120px;
+  position: absolute;
+  right: 280px;
+  top: 440px;
+}
+
+.modal {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.modal__content {
+  padding: 20px;
+  width: 1323px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  background-color: var(--light-bg-color);
+  border-radius: 33px;
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+  -webkit-transition: 0.4s all;
+  transition: 0.4s all;
+}
+.modal__content button {
+  background-color: var(--light-bg-color);
+  position: absolute;
+  margin-top: 10px;
+  margin-left: 1260px;
+  display: inline;
+}
+
+.modal.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.modal__content.active {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.comment {
+  margin-left: 17px;
+}
+.comment__title {
+  font-size: 20px;
+  font-weight: 700;
+}
+.comment__text {
+  font-size: 16px;
+}
+
+.application__container {
+  width: 750px;
+  height: 500px;
+  margin: 0 auto;
+}
+.application__container h3 {
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+.application__form input, .application__form select, .application__form textarea {
+  border-radius: 16px;
+  border: none;
+  width: 355px;
+  height: 69px;
+  background-color: var(--lighter-grey);
+  resize: none;
+  text-indent: 20px;
+  font-size: 20px;
+  color: var(--text-grey-color);
+}
+.application__form textarea {
+  width: 350px;
+  height: 137px;
+  padding: 10px 4px;
+}
+.application__form select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+.application__form button {
+  border-radius: 16px;
+  width: 725px;
+  height: 69px;
+  background-color: var(--mts-color);
+  margin-left: 15px;
+  border: none;
+}
+.application__form__table {
+  border-spacing: 10px;
+}
+.application__form__select {
+  border-radius: 16px;
+  border: none;
+  width: 355px;
+  height: 69px;
+  background: url("../public/plus.png") no-repeat 94% center var(--lighter-grey);
+}
+.application__form__select select {
+  border-radius: 16px;
+  border: none;
+  width: 355px;
+  height: 69px;
+  background: transparent;
+}
+
+input[type=date]::-webkit-calendar-picker-indicator {
+  opacity: 1;
+  display: block;
+  width: 24px;
+  height: 24px;
+  right: 730px;
+  background: url("../public/date.png") no-repeat;
+  position: absolute;
 }

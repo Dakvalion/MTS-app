@@ -1,10 +1,20 @@
 import { Link } from "react-router-dom";
-
+import { useUser } from './UserProvider';
 
 
 export function Navbar() {
 
+    const { user } = useUser();
 
+    const getLinkForRole = () => {
+        if (user && user.role === 'admin') {
+            return { text: 'Заявления', path: '/statements' };
+        } else {
+            return { text: 'Мои заявки', path: '/table' };
+        }
+    };
+
+    const { text, path } = getLinkForRole();
 
     return (
         <nav className="navbar">
@@ -13,10 +23,10 @@ export function Navbar() {
                     <Link to="/">Личный кабинет</Link>
                 </li>
                 <li className="navbar__ul__li">
-                    <Link to="/table">Заявления</Link>
+                    <Link to={path}>{text}</Link>
                 </li>
                 <li className="navbar__ul__li">
-                    <Link to="auth">Выйти</Link>
+                    <Link to="/auth">Выйти</Link>
                 </li>
             </ul>
             

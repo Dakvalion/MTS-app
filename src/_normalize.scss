@@ -116,6 +116,34 @@ button {
 
                 button {
                     background-color: var(--lighter-grey);
+                    cursor: pointer;
+
+                    :before {
+                        content:'Скопировано';
+                        position: absolute;
+                        top: -50px;
+                        right: 0px;
+                        background-color: var(--lighter-grey);
+                        border-radius: 10px;
+                        font-size: 15px;
+                        display: none;
+                    }
+
+                    :after {
+                        content: "";
+                        position: absolute;
+                        top: -20px;
+                        right: 25px;
+                        width: 10px;
+                        height: 10px;
+                        background-color: var(--lighter-grey);
+                        transform: rotate(45deg);
+                        display: none;
+                    }
+
+                    button.active {
+                        display: block;
+                    }
                 }
             }
         }
@@ -151,10 +179,19 @@ button {
         border-radius: 33px;
         width: 1095px;
         height: 640px;
+        margin: 0 auto;
         background-color: var(--light-bg-color);
+        border-collapse: collapse;
+        
+        &--inner {
+            width: 842px;
+            margin: 0 auto;
+        }
 
         h3 {
             text-align: center;
+            margin-top: 27px;
+            margin-bottom: 18px;
         }
     }
 
@@ -164,10 +201,13 @@ button {
         width: 183px;
         height: 40px;
         background-color: var(--lighter-grey);
+        margin-bottom: 14px;
+        
     }
 
     &__application {
         width: 842px;
+        margin: 0 auto;
 
 
         &__head {
@@ -185,5 +225,56 @@ button {
                 width: 20%;
             }
         }
+
+
+        &__body {
+            border-collapse: collapse;
+            
+            &__status {
+                &--review {
+                    background-color: var(--review-color);
+                    border-radius: 10px;
+                    width: 254px;
+                    padding:3px 10px;
+                }
+                &--done {
+                    background-color: var(--done-color);
+                    border-radius: 10px;
+                    width: 100px;
+                    padding:3px 10px;
+                }
+                &--deny {
+                    background-color: var(--deny-color);
+                    border-radius: 10px;
+                    width: 80px;
+                    padding:3px 10px;
+                }
+                &--active {
+                    background-color: var(--active-color);
+                    border-radius: 10px;
+                    width: 70px;
+                    padding:3px 10px;
+                }
+            }
+
+
+            &__button {
+                border-radius: 10px;
+                width: 109px;
+                height: 31px;
+                font-size: 16px;
+                background-color: var(--lighter-grey);
+            }
+    
+        }
     }
+}
+
+.copy {
+    font-size: 15px;
+    text-align: center;
+    width: 120px;
+    position: absolute;
+    right: 280px;
+    top: 440px;
 }

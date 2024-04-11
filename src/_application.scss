@@ -1,0 +1,91 @@
+.application {
+
+    &__container {
+        width: 750px;
+        height: 500px;
+        margin: 0 auto;
+
+        h3 {
+            text-align: center;
+            margin-top: 15px;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__form {
+
+        input, select, textarea {
+            border-radius: 16px;
+            border: none;
+            width: 355px;
+            height: 69px;
+            background-color: var(--lighter-grey);
+            resize: none;
+            text-indent: 20px;
+            font-size: 20px;
+            color: var(--text-grey-color);
+            
+
+           
+        }
+
+        textarea {
+            width: 350px;
+            height: 137px;
+            padding: 10px 4px;
+
+        }
+
+       select {
+        appearance: none;
+       }
+
+
+       button {
+            border-radius: 16px;
+            width: 725px;
+            height: 69px;
+            background-color: var(--mts-color);
+            margin-left: 15px;
+            border: none;
+       }
+
+       &__table {
+            border-spacing: 10px;
+        
+       }
+
+       &__select {
+        border-radius: 16px;
+        border: none;
+        width: 355px;
+        height: 69px;
+        background: url("../public/plus.png") no-repeat 94% center var(--lighter-grey);
+       
+    
+
+        select {
+            border-radius: 16px;
+            border: none;
+            width: 355px;
+            height: 69px;
+            background: transparent;
+        }
+    
+       }
+       
+        
+    }
+
+    
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    opacity: 1;
+    display: block;
+    width: 24px;
+    height: 24px;
+    right:730px;
+    background: url('../public/date.png') no-repeat;
+    position: absolute;
+}

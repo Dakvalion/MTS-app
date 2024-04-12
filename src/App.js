@@ -8,8 +8,8 @@ import { StatementTable } from "./components/StatementTable";
 function App() {
   return (
     <Routes>
-      <Route path="/auth" element={<Auth/>}></Route>
-      <Route path="/" element={<Personal/>}></Route>
+      <Route path="/" element={<Auth/>}></Route>
+      <Route path="/personal" element={<Personal/>}></Route>
       <Route path="/table" element={<Table/>}></Route>
       <Route path="/statements" element={<StatementTable/>}></Route>
     </Routes>

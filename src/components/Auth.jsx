@@ -11,30 +11,30 @@ export function Auth() {
         event.preventDefault();
 
         const formData = new FormData(event.target);
+        const plainFormData = Object.fromEntries(formData.entries());
+        const formDataJsonString = JSON.stringify(plainFormData);
 
-        const urlParams = new URLSearchParams();
-        for (const pair of formData.entries()) {
-            urlParams.append(pair[0], pair[1]);
-        }
-
-        fetch('handler.java', {
+        fetch('http://localhost:8080/auth/authenticate', {
             method: "POST",
             headers: {
-                "Content-Type":"application/x-www-form-urlencoded"
+                "Content-Type":"application/json"
             },
-            body: urlParams.toString()
+            body: formDataJsonString
         })
         .then(response => {
-            if (!JSON.parse(response)) {
+            if (!response.ok) {
                 setErrorMessage('Неправильный логин или пароль');
             }
             return response.json();
         })
         .then( data => {
             setUser(data);
+            console.log(data);
             navigate('/personal');
             setErrorMessage('')})
-        .catch(error  => setErrorMessage('Произошла ошибка при пердаче данных'))
+        .catch(error  => {
+            console.log(error);
+            setErrorMessage('Произошла ошибка при пердаче данных')})
     }
 
     return (

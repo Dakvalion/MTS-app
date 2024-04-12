@@ -100,6 +100,10 @@
         border-radius: 16px;
        }
 
+       &__yes:active {
+        background-color: var(--mts-active-color);
+       }
+
        &__no:active {
             background-color: var(--active-btn-color);
         }

@@ -3,6 +3,7 @@
   --light-bg-color: #303031;
   --lighter-grey: #3E3E3E;
   --mts-color: #F72112;
+  --mts-active-color: #F1493E;
   --active-btn-color: #505050;
   --text-grey-color: #8B8B8B;
   --review-color: #A7A062;
@@ -213,6 +214,9 @@ button {
   background-color: var(--lighter-grey);
   margin-bottom: 14px;
 }
+.table__button:active {
+  background-color: var(--active-btn-color);
+}
 .table__application {
   width: 842px;
   margin: 0 auto;
@@ -398,6 +402,9 @@ button {
   margin-left: 15px;
   border: none;
 }
+.application__form__button:active {
+  background-color: var(--mts-active-color);
+}
 .application__form__table {
   border-spacing: 10px;
 }
@@ -529,6 +536,9 @@ input[type=date]::-webkit-calendar-picker-indicator {
 .statement__form__no {
   background-color: var(--lighter-grey);
   border-radius: 16px;
+}
+.statement__form__yes:active {
+  background-color: var(--mts-active-color);
 }
 .statement__form__no:active {
   background-color: var(--active-btn-color);

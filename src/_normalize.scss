@@ -213,6 +213,10 @@ button {
         
     }
 
+    &__button:active {
+        background-color: var(--active-btn-color);
+    }
+
     &__application {
         width: 842px;
         margin: 0 auto;

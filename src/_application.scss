@@ -48,6 +48,10 @@
             border: none;
        }
 
+       &__button:active {
+            background-color: var(--mts-active-color);
+       }
+
        &__table {
             border-spacing: 10px;
         

@@ -1,4 +1,8 @@
+//import { useApplications } from './UserProvider'; 
+
 export function ViewApplication() {
+    //const { applications } = useApplications();
+
     return (
         <div className="application__container">
             <h3>Просмотр заявки</h3>

@@ -1,11 +1,11 @@
 import { Navbar } from "./Navbar";
-//import { useUser } from './UserProvider'; 
+import { useUser } from './UserProvider'; 
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import { useState } from "react";
 
 
 export function Personal() {
-    //const { user } = useUser();
+    const { user } = useUser();
     const [copied, setCopied] = useState(false);
 
 
@@ -35,16 +35,16 @@ export function Personal() {
                     <img src="/Ellipse 1.png" alt="avatar" />
                 </div>
                 <div className="personal__main__info">
-                    <h3>Иванов Иван Иванович</h3>
-                    <p className="personal__main__info__text">Middle Mobile Dev</p>
+                    <h3>{user.lastName} {user.firstName} {user.fatherName}</h3>
+                    <p className="personal__main__info__text">{user.grade}</p>
                     <hr></hr>
                     <p className="personal__main__info__text">01.01.2001</p>
-                    <p className="personal__main__info__text">+79175957578</p>
-                    <p className="personal__main__info__text">ivanko@gmail.com</p>
+                    <p className="personal__main__info__text">{user.phone}</p>
+                    <p className="personal__main__info__text">{user.email}</p>
                     <div className="personal__main__info__passport">
                         <span>Паспорт</span>
-                        <span>{secretKey('4*** *****2')}</span>
-                        <CopyToClipboard text="4*** *****2" onCopy={handleCopy}>
+                        <span>{secretKey(user.passport)}</span>
+                        <CopyToClipboard text={user.passport} onCopy={handleCopy}>
                             <button><img src="/copy.png" alt="copy" /></button>
                         </CopyToClipboard>
                     </div>

@@ -1,5 +1,5 @@
 
-import React, { createContext, useContext, useState, useEffect } from 'react';
+import React, { createContext, useContext, useState, useEffect, useCallback } from 'react';
 
 const UserContext = createContext();
 const tableContext = createContext({ applications: [] });
@@ -8,19 +8,21 @@ export const AppProvider = ({ children }) => {
  const [user, setUser] = useState(null);
  const [applications, setApplications] = useState([]);
 
- const fetchApplications = async () => {
-    try {
-      const response = await fetch('тут будет апи');
-      const data = await response.json();
-      setApplications(data);
-    } catch (error) {
-      console.error('Ошибка при получении заявок:', error);
-    }
-  };
+ const fetchApplications = useCallback(() => {
+  if (user && user.id) {
+    fetch('тут будет апи', {
+      method: "POST",
+      body: user.id
+    })
+    .then(response => response.json())
+    .then(data => setApplications(data))
+    .catch(error => console.log('error'));
+  }
+  }, [user]); 
 
   useEffect(() => {
     fetchApplications();
-  }, []);
+  }, [fetchApplications]);
 
  return (
     <UserContext.Provider value={{ user, setUser }}>

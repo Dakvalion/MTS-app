@@ -168,6 +168,12 @@ button {
                 border-radius: 16px;
                 background-color: var(--light-bg-color);
                 margin-bottom: 20px;
+
+                
+            }
+
+            .active-class {
+                background-color: var(--active-btn-color);
             }
         }
     }
@@ -202,6 +208,8 @@ button {
         height: 40px;
         background-color: var(--lighter-grey);
         margin-bottom: 14px;
+
+        
         
     }
 
@@ -264,7 +272,15 @@ button {
                 height: 31px;
                 font-size: 16px;
                 background-color: var(--lighter-grey);
+
+                
+
             }
+
+            &__button:active {
+                background-color: var(--active-btn-color);
+            }
+
     
         }
     }
@@ -277,8 +293,10 @@ button {
     position: absolute;
     right: 280px;
     top: 440px;
+
 }
 
 ::placeholder {
     color: var(--text-grey-color);
 }
+

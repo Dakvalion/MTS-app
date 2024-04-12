@@ -8,12 +8,22 @@ export function Personal() {
     //const { user } = useUser();
     const [copied, setCopied] = useState(false);
 
-    
+
 
     const handleCopy = () => {
         setCopied(true);
         setTimeout(() => setCopied(false), 500);
     }
+
+    function secretKey (str) {
+        let strArr = str.split(" ");
+
+        let seria = strArr[0].slice(0,1) + ('*'.repeat(3));
+        let number = ('*'.repeat(5)) + strArr[1].slice(5);
+
+        return `${seria} ${number}`;
+    }
+
 
     return (
         <div className="personal__container">
@@ -33,7 +43,7 @@ export function Personal() {
                     <p className="personal__main__info__text">ivanko@gmail.com</p>
                     <div className="personal__main__info__passport">
                         <span>Паспорт</span>
-                        <span>4*** *****2</span>
+                        <span>{secretKey('4*** *****2')}</span>
                         <CopyToClipboard text="4*** *****2" onCopy={handleCopy}>
                             <button><img src="/copy.png" alt="copy" /></button>
                         </CopyToClipboard>

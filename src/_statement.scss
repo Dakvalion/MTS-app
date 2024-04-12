@@ -87,6 +87,7 @@
         margin-left: 13px;
         margin-top: 10px;
         border: none;
+
        }
 
        &__yes {
@@ -98,6 +99,11 @@
         background-color: var(--lighter-grey);
         border-radius: 16px;
        }
+
+       &__no:active {
+            background-color: var(--active-btn-color);
+        }
+
     }
         
     

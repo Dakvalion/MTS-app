@@ -182,6 +182,9 @@ button {
   background-color: var(--light-bg-color);
   margin-bottom: 20px;
 }
+.navbar__ul__li .active-class {
+  background-color: var(--active-btn-color);
+}
 
 .table__container {
   -webkit-box-sizing: border-box;
@@ -259,6 +262,9 @@ button {
   height: 31px;
   font-size: 16px;
   background-color: var(--lighter-grey);
+}
+.table__application__body__button:active {
+  background-color: var(--active-btn-color);
 }
 
 .copy {
@@ -523,4 +529,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 .statement__form__no {
   background-color: var(--lighter-grey);
   border-radius: 16px;
+}
+.statement__form__no:active {
+  background-color: var(--active-btn-color);
 }

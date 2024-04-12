@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { useUser } from './UserProvider';
 
 
@@ -20,10 +20,10 @@ export function Navbar() {
         <nav className="navbar">
             <ul className="navbar__ul">
                 <li className="navbar__ul__li">
-                    <Link to="/">Личный кабинет</Link>
+                    <NavLink to="/" className={({ isActive }) => isActive ? "active-class" : "non-active-class"}>Личный кабинет</NavLink>
                 </li>
                 <li className="navbar__ul__li">
-                    <Link to={path}>{text}</Link>
+                    <NavLink to={path} className={({ isActive }) => isActive ? "active-class" : "non-active-class"}>{text}</NavLink>
                 </li>
                 <li className="navbar__ul__li">
                     <Link to="/auth">Выйти</Link>

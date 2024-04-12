@@ -7,6 +7,7 @@ import { useState } from "react";
 export function Personal() {
     const { user } = useUser();
     const [copied, setCopied] = useState(false);
+    
 
 
 

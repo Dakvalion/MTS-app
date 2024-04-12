@@ -11,7 +11,7 @@ export const AppProvider = ({ children }) => {
  const fetchApplications = useCallback(() => {
   if (user && user.id) {
     fetch('http://localhost:8080/api/trips', {
-      method: "GET",
+      method: "GET"
     })
     .then(response => response.json())
     .then(data => setApplications(data))
